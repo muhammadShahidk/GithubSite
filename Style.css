@@ -1,0 +1,143 @@
+*{
+    padding: 0;margin: 0;
+}
+
+.SectionM{
+    margin: 50px ;
+}
+
+hr{
+    color: #dfcbcb;
+    /* font-size: 1px; */
+    /* line-height: 25px; */
+    border: 1px solid;
+}
+
+/* ---------------navbar---------------- */
+.container-fluid {
+    padding-right: 0;
+    padding-left: 0;
+
+}
+#navbar {
+    background-color: gray;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 23px;
+    height: 10vh;
+    height: 7rem;
+
+}
+
+#navbar li{
+    text-decoration: none;
+    display: inline-block;
+    padding: 5px;
+    padding-left: 25px;
+}
+
+/* -----------------banner-------------------- */
+section#Banner {
+    box-shadow: 0px 1px 6px 0px black;
+}
+#Banner .Left{
+    background-color:#38a0ff;
+    color: white;
+    display:flex;
+
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 5em 17em;
+}
+
+#Banner .Left img{
+    width: 25em;
+    border-radius: 50rem;
+    box-shadow:-5px 7px 2px 0px white;
+}
+
+/* --------------------------skills ---------------- */
+#Skills{
+    /* border: 1px solid black;     */
+}
+
+#Skills h1{
+    text-align: center;
+}
+
+#Skills .SkillsContanier{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 3rem;
+}
+
+#Skills .SkillsContanier .skCont{
+       /* border: 1px solid rgb(0 0 0 / 0%); */
+       box-shadow: -2px 2px 5px 0px;
+       border-radius: 9px;
+       padding-bottom: 42px;
+       /* background-color: #c6d6db2e; */ 
+}
+
+#Skills .SkillsContanier .skCont h3:first-child{
+    background-color: #7a7aae;
+    color: white;
+    padding: 6px;
+    font-weight: 700;
+    border-radius: 21px 0px 20px 0px;
+    padding-left: 19px;
+    
+}
+
+#Skills .SkillsContanier .skCont .skill {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 8px;
+    padding: 14px;
+    border-radius: 8px;
+    MIN-WIDTH: 107px;
+    /* width: 448px; */
+    margin: 7px 9px;
+    box-shadow: 2px 0px 7px 0px;
+}
+
+#Skills .SkillsContanier .skCont .skill .logo i{
+    font-size: 25px;
+}
+
+#Skills .SkillsContanier .skCont .skill h3{
+    display: inline-block;
+    padding:5px;
+    padding-left:8px ;
+    margin: 0px;
+}
+#Skills .SkillsContanier .skCont .skill .Grap{
+    /* width: 100px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#Skills .SkillsContanier .skCont .skill .Grap i{
+    margin-left: 10px;
+    font-size: 15px;
+
+    
+}
+
+
+/* -----------projects ----------------- */
+#WebD{
+
+}
+
+#WebD h1{
+    margin-top: 25px;
+}
+
+.thumbnail img{
+    width: 75%;
+}
