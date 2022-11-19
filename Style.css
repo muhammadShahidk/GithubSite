@@ -2,8 +2,14 @@
     padding: 0;margin: 0;
 }
 
+
 .SectionM{
     margin: 50px ;
+}
+
+body{
+    background-color: #211f1f;
+    color: #afa1a1;
 }
 
 hr{
@@ -21,6 +27,7 @@ hr{
 }
 #navbar {
     background-color: gray;
+    background-color: #343333;
     color: white;
     display: flex;
     justify-content: space-between;
@@ -36,6 +43,7 @@ hr{
     display: inline-block;
     padding: 5px;
     padding-left: 25px;
+    cursor: pointer;
 }
 
 /* -----------------banner-------------------- */
@@ -74,16 +82,21 @@ section#Banner {
     grid-gap: 3rem;
 }
 
-#Skills .SkillsContanier .skCont{
+#Skills .container .row{
+    margin-bottom: 50px;
+}
+#Skills .skCont{
        /* border: 1px solid rgb(0 0 0 / 0%); */
        box-shadow: -2px 2px 5px 0px;
+       box-shadow: -4px 31px 0px -1px;
        border-radius: 9px;
        padding-bottom: 42px;
        /* background-color: #c6d6db2e; */ 
 }
 
-#Skills .SkillsContanier .skCont h3:first-child{
-    background-color: #7a7aae;
+#Skills .skCont h3:first-child{
+    /* background-color: #7a7aae; */
+    background-color: #272525;
     color: white;
     padding: 6px;
     font-weight: 700;
@@ -92,7 +105,7 @@ section#Banner {
     
 }
 
-#Skills .SkillsContanier .skCont .skill {
+#Skills .skCont .skill {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -102,26 +115,27 @@ section#Banner {
     MIN-WIDTH: 107px;
     /* width: 448px; */
     margin: 7px 9px;
-    box-shadow: 2px 0px 7px 0px;
+    /* box-shadow: 2px 0px 7px 0px; */
+    border: 1px solid #342d2d;
 }
 
-#Skills .SkillsContanier .skCont .skill .logo i{
+#Skills .skCont .skill .logo i{
     font-size: 25px;
 }
 
-#Skills .SkillsContanier .skCont .skill h3{
+#Skills .skCont .skill h3{
     display: inline-block;
     padding:5px;
     padding-left:8px ;
     margin: 0px;
 }
-#Skills .SkillsContanier .skCont .skill .Grap{
+#Skills .skCont .skill .Grap{
     /* width: 100px; */
     display: flex;
     align-items: center;
     justify-content: center;
 }
-#Skills .SkillsContanier .skCont .skill .Grap i{
+#Skills .skCont .skill .Grap i{
     margin-left: 10px;
     font-size: 15px;
 
