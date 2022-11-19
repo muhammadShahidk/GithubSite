@@ -155,3 +155,14 @@ section#Banner {
 .thumbnail img{
     width: 75%;
 }
+
+
+@media only screen and (max-width: 600px) {
+    .SectionM{
+        margin: 3px ;
+    }
+
+    #Skills .container .col{
+        margin-bottom: 60px;
+    }
+}
