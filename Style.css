@@ -90,6 +90,7 @@ section#Banner {
        box-shadow: -2px 2px 5px 0px;
        box-shadow: -4px 31px 0px -1px;
        border-radius: 9px;
+       min-height: 385px;
        padding-bottom: 42px;
        /* background-color: #c6d6db2e; */ 
 }
@@ -156,6 +157,12 @@ section#Banner {
     width: 75%;
 }
 
+.title {
+    min-width: 177px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+} 
 
 @media only screen and (max-width: 600px) {
     .SectionM{
