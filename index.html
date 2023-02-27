@@ -182,10 +182,10 @@
                         <h3>Web Back Eand</h3>
                         <div class="skill">
                             <div class="title">
-                            <div class="logo">
-                                <i class="fa-regular fa-window-restore"></i>
-                            </div>
-                            <h3>C#</h3>
+                                <div class="logo">
+                                    <i class="fa-regular fa-window-restore"></i>
+                                </div>
+                                <h3>C#</h3>
                             </div>
                             <div class="Grap">
                                 <i class="fa-solid fa-circle"></i>
@@ -200,10 +200,10 @@
 
                         <div class="skill">
                             <div class="title">
-                            <div class="logo">
-                                <i class="fa-regular fa-window-restore"></i>
-                            </div>
-                            <h3>SQL</h3>
+                                <div class="logo">
+                                    <i class="fa-regular fa-window-restore"></i>
+                                </div>
+                                <h3>SQL</h3>
                             </div>
                             <div class="Grap">
                                 <i class="fa-solid fa-circle"></i>
@@ -229,10 +229,10 @@
                         <h3>Others</h3>
                         <div class="skill">
                             <div class="title">
-                            <div class="logo">
-                                <i class="fa-regular fa-window-restore"></i>
-                            </div>
-                            <h3>GitHub</h3>
+                                <div class="logo">
+                                    <i class="fa-regular fa-window-restore"></i>
+                                </div>
+                                <h3>GitHub</h3>
                             </div>
                             <div class="Grap">
                                 <i class="fa-solid fa-circle"></i>
@@ -251,27 +251,10 @@
                         <h3>Ms Office</h3>
                         <div class="skill">
                             <div class="title">
-                            <div class="logo">
-                                <i class="fa-regular fa-window-restore"></i>
-                            </div>
-                            <h3>Excel</h3>
-                            </div>
-                            <div class="Grap">
-                                <i class="fa-solid fa-circle"></i>
-                                <i class="fa-solid fa-circle"></i>
-                                <i class="fa-solid fa-circle"></i>
-                                <i class="fa-regular fa-circle"></i>
-                                <i class="fa-regular fa-circle"></i>
-                                <i class="fa-regular fa-circle"></i>
-
-                            </div>
-                        </div>
-                        <div class="skill">
-                            <div class="title">
-                            <div class="logo">
-                                <i class="fa-regular fa-window-restore"></i>
-                            </div>
-                            <h3>Powerpoint</h3>
+                                <div class="logo">
+                                    <i class="fa-regular fa-window-restore"></i>
+                                </div>
+                                <h3>Excel</h3>
                             </div>
                             <div class="Grap">
                                 <i class="fa-solid fa-circle"></i>
@@ -285,10 +268,27 @@
                         </div>
                         <div class="skill">
                             <div class="title">
-                            <div class="logo">
-                                <i class="fa-regular fa-window-restore"></i>
+                                <div class="logo">
+                                    <i class="fa-regular fa-window-restore"></i>
+                                </div>
+                                <h3>Powerpoint</h3>
                             </div>
-                            <h3>Word</h3>
+                            <div class="Grap">
+                                <i class="fa-solid fa-circle"></i>
+                                <i class="fa-solid fa-circle"></i>
+                                <i class="fa-solid fa-circle"></i>
+                                <i class="fa-regular fa-circle"></i>
+                                <i class="fa-regular fa-circle"></i>
+                                <i class="fa-regular fa-circle"></i>
+
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="title">
+                                <div class="logo">
+                                    <i class="fa-regular fa-window-restore"></i>
+                                </div>
+                                <h3>Word</h3>
                             </div>
                             <div class="Grap">
                                 <i class="fa-solid fa-circle"></i>
@@ -344,6 +344,8 @@
                         </a>
                     </div>
                 </div>
+            </div>
+            <div class="row">
                 <div class="col-md-4">
                     <div class="thumbnail">
                         <a href="Accounts/login.html">
@@ -381,7 +383,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </body>
 <style>
-    p{
+    p {
         /* cursor: pointer; */
     }
 </style>
@@ -390,14 +392,15 @@
     var divs = $(".skCont");
     var array = Array.from(divs);
     var skill = $(".skCont .skill").find(".title");
-    var AllTitls =[];
-    var titls = $(skill).each((index,el)=>AllTitls.push(el.textContent));
-   
+    var AllTitls = [];
+    var titls = $(skill).each((index, el) => AllTitls.push(el.textContent));
+
 
     console.log(AllTitls[0]);
     console.log(array);
 </script>
+
 </html>
 
-<input id="Button1" type="button" value="button" />>
+<input id="Button1" type="button" value="button" />
 <asp:MultiView runat="server"></asp:MultiView>
