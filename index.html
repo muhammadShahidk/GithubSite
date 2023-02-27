@@ -11,6 +11,8 @@
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="Style.css">
+    <!-- <link rel="stylesheet"  href="H:/Virtual%20University/2n%20Semester/Programs/bootstrap-5.2.3-dist/css/bootstrap.css"> -->
+    <script src="/External/jquery-3.6.0.min.js"></script>
 </head>
 
 <body>
@@ -22,10 +24,10 @@
             </div>
             <div class="manue">
                 <ul>
-                    <li>Home</li>
-                    <li>Contact</li>
-                    <li>Skills</li>
-                    <li>Projects</li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Skills</a></li>
+                    <li><a href="#">Projects</a></li>
                 </ul>
             </div>
         </nav>
@@ -342,11 +344,29 @@
                         </a>
                     </div>
                 </div>
+                <div class="col-md-4">
+                    <div class="thumbnail">
+                        <a href="Accounts/login.html">
+                            <img src="images/IntroWebWithAhmed.png" alt="Fjords" style="width:100%">
+                            <div class="caption">
+                                <p>Lorem ipsum...</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="thumbnail">
+                        <a href="Accounts/Dashboard.html">
+                            <img src="images/IntroWebWithAhmed.png" alt="Fjords" style="width:100%">
+                            <div class="caption">
+                                <p>Lorem ipsum...</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
-
-    <h1>pakistan</h1>
 
 
 
@@ -360,7 +380,24 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </body>
+<style>
+    p{
+        /* cursor: pointer; */
+    }
+</style>
+<script>
+    // $("div").click(alert("hi")).css({"cursor":"pointer"});
+    var divs = $(".skCont");
+    var array = Array.from(divs);
+    var skill = $(".skCont .skill").find(".title");
+    var AllTitls =[];
+    var titls = $(skill).each((index,el)=>AllTitls.push(el.textContent));
+   
 
+    console.log(AllTitls[0]);
+    console.log(array);
+</script>
 </html>
+
 <input id="Button1" type="button" value="button" />>
 <asp:MultiView runat="server"></asp:MultiView>

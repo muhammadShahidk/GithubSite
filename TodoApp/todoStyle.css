@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.con{
+    width: 20em;
+    height:20em;
+    border: 1px solid black;
+    
+}
+
+
+
+
+ 
+
+
+
+.divBorder{
+   border:  1px solid black;
+}
+
+.TodoBar{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    width: fit-content;
+}
+.TodoBar .bar{
+    border: 1px solid black;
+    width: 22em;
+}
+
+.TodoBar .addbtn {
+    border: 1px solid black;
+}
+
+
+
+.Catoagory {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: fit-content;
+}
+
+.Catoagory h3 {
+    width: 12em;
+}
+
+
+.todobox {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+}
+
+.todobox .todo.divBorder {
+    width: 60em;
+    border-radius: 4px;
+}
+
+
+.btns {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.btns .btn{
+
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    margin-left: 5px;
+}

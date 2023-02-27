@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/e793055494.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- d-flex flex-column justify-content-center align-items-center -->
+    <div class="container mt-sm-5">
+        <!-- login form and bannar Container -->
+        <div class="mainBox  border  m-auto row  g-1">
+            <!-- form Bannar -->
+            <div class="col-12 col-md-5 col-xl-7 ">
+                <div class="bannar text-white p-3">
+                    <div class="logobox">
+                        <span class="logo"></span>
+                        <h5>Logo</h5>
+                    </div>
+                    <h1>Welcome Page</h1>
+                    <p>sign in to continue access</p>
+                </div>
+            </div>
+            <!-- Login form -->
+            <div class="col-12 col-md-7 col-xl-5 ">
+                <div class="LoginForm rounded p-5">
+                    <h1 class="mb-4"> Sign in</h1>
+
+                    <form action="">
+                        <!-- user name -->
+                        <input type="text" class="form-control rounded-4" placeholder="User Name">
+                        <!-- password -->
+                        <div class="password mt-3">
+                            <input type="password" class="form-control  rounded-4" placeholder="Password"
+                                aria-describedby="passwordHelp">
+                        </div>
+
+                        <div id="passwordHelp" class="form-text">
+                            Your password must be 8-20 characters long, contain letters and numbers, and must not
+                            contain spaces, special characters, or emoji.
+                        </div>
+
+                        <!-- buttons -->
+                        <!-- login -->
+                        <button class="btn btn-success mt-3  w-100  m-auto d-block custom-btn1 ">
+                            <span class="badge "><i class="fa-solid fa-road"></i></span>
+                            Login
+
+                        </button>
+
+                        <!--google  -->
+                        <button class="btn btn-info mt-3  w-100  custom-btn2">
+                            <span class="badge">
+                                <i class="fa-brands fa-facebook"></i></span>
+                            Sign in with Google
+                        </button>
+                        <!-- Facebook -->
+                        <button class="btn btn-dark mt-3   w-100 custom-btn3">
+
+                            <span class="badge"><i class="fa-brands fa-google"></i></span>
+                            Sign in with Facebook</button>
+
+
+                        <style>
+                            .custom-btn1 {
+                                background-color: #725d79;
+                            }
+
+                            .custom-btn2 {
+
+                                background-color: #620152b0;
+                                color: white;
+
+                            }
+
+                            .custom-btn3 {
+                                background-color: #1c1a1c;
+                            }
+                        </style>
+
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/login.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/e793055494.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container d-flex flex-wrap justify-content-center ">
+        <h1 class="d-block col-12 text-white bg-dark p-2 rounded shadow">Dash Board</h1>
+        <div class="Card">
+            <div  class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Customer Orders Total</h4>
+                    <div class="card-items">
+                        <p class="d-block  shadow p-2">Total Amount <span class="float-end badge text-bg-info">54144</span>
+                        </p>
+                        <p class="d-block shadow p-2">Total Recieved <span class="float-end badge text-bg-info">54144</span>
+                        </p>
+                        <p class="d-block shadow p-2">Total Balance <span class="float-end badge text-bg-info">54144</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+   
+      
+<style>
+    .card{
+        min-width: 300px;
+        margin: 5px;
+    }
+</style>
+
+    <script>
+        var container = document.querySelector(".container");
+// debugger
+        function AddCard(card) {
+            container.append(card);
+            // console.log(card.CreateCard());
+            // console.log(container);
+        }
+
+        class Card {
+            constructor() {
+                this.Title = "Title";
+                this.Amount = "Amount";
+                this.Balance = "Balance";
+                this.Recieved = "Recieved";
+
+            }
+
+            CreateCard(_Title = "title", _Amount = "amount", _Balance = "balance", _Recieved = "Recieved") {
+                var CardBorday = `
+            <div class="card-body">
+                <h4 class="card-title">${_Title}</h4>
+                <div class="card-items">
+                    <p class="d-block  shadow p-2">Total Amount <span class="float-end badge text-bg-info">${_Amount}</span></p>
+                    <p class="d-block shadow p-2">Total Recieved <span class="float-end badge text-bg-info">${_Recieved}</span></p>
+                    <p class="d-block shadow p-2">Total Balance <span class="float-end badge text-bg-info">${_Balance}</span></p>
+                </div>
+            </div>
+        `
+                var card = document.createElement("div");
+                card.classList.add("card");
+                card.innerHTML = CardBorday;
+                return card;
+
+
+
+            }
+        }
+      var   Titles = [];
+      Titles.push(" Factory Bond Total");
+        Titles.push(" Factory Grout Total");
+        Titles.push(" Employee Expense Total");
+        Titles.push(" Total Rent Calculation");
+        Titles.push(" Vehicle Expense Total");
+        Titles.push(" Total Earnings");
+        Titles.push("Overall Earnings Total");
+        Titles.push("Overall Expenses Total");
+        Titles.push("Overall Profit Total");
+        Titles.push("Muhammad Shahid");
+        Titles.push("Noor Khan");
+
+        Titles.forEach((T)=>{
+            var newCard = new Card();
+            // newCard.CreateCard(T,500,30,20);
+            AddCard( newCard.CreateCard(T,529,96,200));
+        });
+        console.log("hi");
+    </script>
+</body>
+
+</html>

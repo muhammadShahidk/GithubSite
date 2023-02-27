@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ee50d1;
+  background-color: red;
+  background: linear-gradient(to right, #ec51d1, #964cc7);
+
+  width: 100vw;
+  height: 100vh;
+}
+
+.container {
+  /* margin-top:50px ; */
+}
+/* Login box container */
+.mainBox {
+  background-color: #3a208b;
+  background: url(Logo2.png);
+  background-position: center;
+  background-size: cover;
+  background-position: 2px 2px;
+
+  background-position: center ; /* center horizontally, 50% from top vertically */
+  background-repeat: no-repeat; /* prevents the background image from repeating */
+}
+
+/* Form */
+.LoginForm {
+ min-height: 450px;
+ /* max-width: 400px; */
+  color: black;
+  background-color: white;
+}
+
+.bannar {
+  /* color: white; */
+  min-height: 450px;
+}
+.bannar h1 {
+  margin-top: 25%;
+}
+
+.inputBorder {
+  border-radius: 50px;
+}
+
+.Cbtn {
+  text-align: right;
+  background-color: red;
+}

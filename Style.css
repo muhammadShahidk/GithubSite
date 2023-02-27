@@ -1,18 +1,19 @@
-*{
-    padding: 0;margin: 0;
+* {
+    padding: 0;
+    margin: 0;
 }
 
 
-.SectionM{
-    margin: 50px ;
+.SectionM {
+    margin: 50px;
 }
 
-body{
+body {
     background-color: #211f1f;
     color: #afa1a1;
 }
 
-hr{
+hr {
     color: #dfcbcb;
     /* font-size: 1px; */
     /* line-height: 25px; */
@@ -25,6 +26,7 @@ hr{
     padding-left: 0;
 
 }
+
 #navbar {
     background-color: gray;
     background-color: #343333;
@@ -38,22 +40,44 @@ hr{
 
 }
 
-#navbar li{
+#navbar li {
     text-decoration: none;
     display: inline-block;
     padding: 5px;
-    padding-left: 25px;
+   
     cursor: pointer;
+    text-align: center;
+    align-items: center;
+
+    /* padding-left: 25px; */
+    margin-right: 25px;
+    border: 1px solid #292525;
+    min-width: 100px;
+    border-radius: 8px;
+    font-size: 17px;
+    transition: all 139.287ms cubic-bezier(0.26, 0.44, 1, 1) 21.0404ms;
+
+}
+#navbar a {
+    color: #ffffff;
+    text-decoration: none;
 }
 
+#navbar li:hover {
+    background-color: white;
+}
+#navbar li:hover a{
+    color: black;;
+}
 /* -----------------banner-------------------- */
 section#Banner {
     box-shadow: 0px 1px 6px 0px black;
 }
-#Banner .Left{
-    background-color:#38a0ff;
+
+#Banner .Left {
+    background-color: #38a0ff;
     color: white;
-    display:flex;
+    display: flex;
 
     align-items: center;
     flex-direction: column;
@@ -61,41 +85,42 @@ section#Banner {
     border-radius: 5em 17em;
 }
 
-#Banner .Left img{
+#Banner .Left img {
     width: 25em;
     border-radius: 50rem;
-    box-shadow:-5px 7px 2px 0px white;
+    box-shadow: -5px 7px 2px 0px white;
 }
 
 /* --------------------------skills ---------------- */
-#Skills{
+#Skills {
     /* border: 1px solid black;     */
 }
 
-#Skills h1{
+#Skills h1 {
     text-align: center;
 }
 
-#Skills .SkillsContanier{
+#Skills .SkillsContanier {
     display: grid;
     grid-template-columns: auto auto auto;
     grid-gap: 3rem;
 }
 
-#Skills .container .row{
+#Skills .container .row {
     margin-bottom: 50px;
 }
-#Skills .skCont{
-       /* border: 1px solid rgb(0 0 0 / 0%); */
-       box-shadow: -2px 2px 5px 0px;
-       box-shadow: -4px 31px 0px -1px;
-       border-radius: 9px;
-       min-height: 385px;
-       padding-bottom: 42px;
-       /* background-color: #c6d6db2e; */ 
+
+#Skills .skCont {
+    /* border: 1px solid rgb(0 0 0 / 0%); */
+    box-shadow: -2px 2px 5px 0px;
+    box-shadow: -4px 31px 0px -1px;
+    border-radius: 9px;
+    min-height: 385px;
+    padding-bottom: 42px;
+    /* background-color: #c6d6db2e; */
 }
 
-#Skills .skCont h3:first-child{
+#Skills .skCont h3:first-child {
     /* background-color: #7a7aae; */
     background-color: #272525;
     color: white;
@@ -103,7 +128,7 @@ section#Banner {
     font-weight: 700;
     border-radius: 21px 0px 20px 0px;
     padding-left: 19px;
-    
+
 }
 
 #Skills .skCont .skill {
@@ -120,40 +145,40 @@ section#Banner {
     border: 1px solid #342d2d;
 }
 
-#Skills .skCont .skill .logo i{
+#Skills .skCont .skill .logo i {
     font-size: 25px;
 }
 
-#Skills .skCont .skill h3{
+#Skills .skCont .skill h3 {
     display: inline-block;
-    padding:5px;
-    padding-left:8px ;
+    padding: 5px;
+    padding-left: 8px;
     margin: 0px;
 }
-#Skills .skCont .skill .Grap{
+
+#Skills .skCont .skill .Grap {
     /* width: 100px; */
     display: flex;
     align-items: center;
     justify-content: center;
 }
-#Skills .skCont .skill .Grap i{
+
+#Skills .skCont .skill .Grap i {
     margin-left: 10px;
     font-size: 15px;
 
-    
+
 }
 
 
 /* -----------projects ----------------- */
-#WebD{
+#WebD {}
 
-}
-
-#WebD h1{
+#WebD h1 {
     margin-top: 25px;
 }
 
-.thumbnail img{
+.thumbnail img {
     width: 75%;
 }
 
@@ -162,14 +187,14 @@ section#Banner {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-} 
+}
 
 @media only screen and (max-width: 600px) {
-    .SectionM{
-        margin: 3px ;
+    .SectionM {
+        margin: 3px;
     }
 
-    #Skills .container .col{
+    #Skills .container .col {
         margin-bottom: 60px;
     }
 }
