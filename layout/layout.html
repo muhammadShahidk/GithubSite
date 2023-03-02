@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>My Website</title>
+  <style>
+    /* reset styling */
+    *{
+      padding: 0;
+      margin: 0;
+    }
+    body{
+      height: 100vh;
+    }
+    /* Header */
+    header {
+      background-color: #333;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    /* Navigation bar */
+    nav {
+      background-color: #eee;
+      border: 1px solid #ccc;
+      padding: 10px;
+      width: 200px;
+      /* height: 75vh; */
+    }
+
+    /* Navigation links */
+    nav a {
+      display: block;
+      margin: 10px;
+      padding: 5px;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      background-color: #ddd;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #333;
+      color: white;
+      padding: 10px;
+      text-align: center;
+    }
+
+    /* content */
+    div#content {
+      position: fixed;
+      top: 123px;
+      right: 57px;
+      left: 256px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>My Website</h1>
+  </header>
+  <style>
+    #NavAndContent{
+      height: 100%;
+      background-color: gray;
+      border: 1px solid black;
+      width: 100wh;
+    }
+  </style>
+  <div id="NavAndContent">
+  <nav>
+    <a href="#" data-page="home.html">Home</a>
+    <a href="#" data-page="about.html">About</a>
+    <a href="#" data-page="contact.html">Contact</a>
+  </nav>
+
+
+  <div id="content">
+    <!-- Content goes here -->
+  </div>
+</div>
+
+
+
+  <footer>
+    &copy; 2023 My Website
+  </footer>
+
+
+  <script>
+    const content = document.querySelector('#content')
+
+    function loadPage(pageName) {
+      fetch(pageName)
+        .then(response => response.text())
+        .then(html => {
+          content.innerHTML = html
+        })
+    }
+
+    const links = document.querySelectorAll('nav a')
+    links.forEach(link => {
+      link.addEventListener('click', event => {
+        event.preventDefault()
+        const pageName = event.target.dataset.page
+        loadPage(pageName)
+      })
+    })
+  </script>
+
+</body>
+
+</html>

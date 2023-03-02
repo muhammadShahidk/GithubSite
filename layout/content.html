@@ -1,0 +1,23 @@
+<!-- other-file.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Other File</title>
+  <link rel="import" href="layout.html">
+</head>
+<body>
+
+ 
+  
+  <template is="imported-template" content-id="my-imported-template"></template>
+  <script>
+    fetch('layout.html')
+      .then(response => response.text())
+      .then(data => {
+        const content = document.querySelector('#content')
+        content.innerHTML = data
+      })
+  </script>
+  
+</body>
+</html>
