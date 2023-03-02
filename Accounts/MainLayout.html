@@ -7,44 +7,79 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
 
-    <!-- <link rel="stylesheet" href="login.css"> -->
+    <link rel="stylesheet" href="MainLayout.css">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <script src="https://kit.fontawesome.com/e793055494.js" crossorigin="anonymous"></script>
+    <script src="../js/jquery-3.6.0.min.js"></script>
 </head>
-
+<!-- Note -->
+    <!-- In this Page i will use bootstrap grid system only all other styles will 
+    be wretten using custom css -->
+    <!-- user interactions will be implemented with js custom coding -->
 <body>
     <div class="container-fluid">
         <div class="row ">
             <div class="border d-none d-xl-block  col-xl-4 ">
                 <!-- navBar -->
-                <nav>
-                    <div class="logo mb-5 mt-3">
+                
+                    <div class="logo">
                         <h1 class="p-2 ">logo</h1>
                     </div>
-                    
-                    <div class="ManueItem d-flex">
-                        <div class="iconS ">icon</div>
-                        <h5>Dashboard</h5>
-                        <div class="iconE"></div>
-                    </div>
-                </nav>
+                    <nav>
+                        <a href="#" data-page="Dashboard.html">Home</a>
+                        <a href="#" data-page="about.html">About</a>
+                        <a href="#" data-page="contact.html">Contact</a>
+                    </nav>
             </div>
+            <!-- content aria to display -->
             <div class="col-12 col-xl-8 border">
+                <div id="content">
 
-                <button type="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#myDiv">Toggle
-                    Div</button>
-
-                <div id="myDiv" class="collapse">
-                    This div will be hidden initially and shown when the button is clicked.
                 </div>
-
+               
             </div>
 
 
         </div>
     </div>
 
+    <script>
+        // const content = document.querySelector('#content')
+    
+        // function loadPage(pageName) {
+        //   fetch(pageName)
+        //     .then(response => response.text())
+        //     .then(html => {
+        //       content.innerHTML = html
+        //     })
+        // }
+    
+        // const links = document.querySelectorAll('nav a')
+        // links.forEach(link => {
+        //   link.addEventListener('click', event => {
+        //     event.preventDefault()
+        //     const pageName = event.target.dataset.page
+        //     loadPage(pageName)
+        //   })
+        // })
+        const content = $('#content');
+
+function loadPage(pageName) {
+  content.load(pageName);
+}
+
+const links = $('nav a');
+links.each((index, link) => {
+  $(link).on('click', event => {
+    event.preventDefault();
+    const pageName = $(event.target).data('page');
+    loadPage(pageName);
+  });
+});
+
+      </script>
 </body>
 <script src="/js/bootstrap.min.js"></script>
+<!-- <script src="accounts.js"></script> -->
 
 </html>
