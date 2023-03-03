@@ -9,6 +9,7 @@
 
     <link rel="stylesheet" href="MainLayout.css">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="layout.css">
     <script src="https://kit.fontawesome.com/e793055494.js" crossorigin="anonymous"></script>
     <script src="../js/jquery-3.6.0.min.js"></script>
 </head>
@@ -19,7 +20,7 @@
 <body>
     <div class="container-fluid">
         <div class="row ">
-            <div class="border col-2 col-xl-4 ">
+            <div class="border col-2 col-xl-4 sidebarr">
                 <!-- navBar -->
                 
                     <div class="logo">
@@ -64,18 +65,18 @@
         // })
         const content = $('#content');
 
-function loadPage(pageName) {
-  content.load(pageName);
-}
+            function loadPage(pageName) {
+                content.load(pageName);
+            }
 
-const links = $('nav a');
-links.each((index, link) => {
-  $(link).on('click', event => {
-    event.preventDefault();
-    const pageName = $(event.target).data('page');
-    loadPage(pageName);
-  });
-});
+            const links = $('nav a');
+            links.each((index, link) => {
+                $(link).on('click', event => {
+                    event.preventDefault();
+                    const pageName = $(event.target).data('page');
+                    loadPage(pageName);
+                });
+            });
 
       </script>
 </body>

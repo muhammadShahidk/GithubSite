@@ -1,0 +1,20 @@
+.sidebarr{
+    background: lightgray;
+    height: 100vh;
+}
+.sidebarr a{
+    text-decoration: none;
+    display: block;
+    border: 1px solid black;
+    width: 80%;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 2px 5px ;
+    
+    box-shadow: 1px 2px;
+    cursor: pointer;
+}
+
+.sidebarr a:hover{
+    background: #f0ecec;
+}
