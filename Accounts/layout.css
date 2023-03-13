@@ -1,20 +1,225 @@
-.sidebarr{
-    background: lightgray;
-    height: 100vh;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-.sidebarr a{
-    text-decoration: none;
-    display: block;
-    border: 1px solid black;
-    width: 80%;
-    border-radius: 5px;
-    margin: 5px;
-    padding: 2px 5px ;
-    
-    box-shadow: 1px 2px;
-    cursor: pointer;
+html {
+  font-size: 16px !important;
+}
+body {
+  font-family: "Roboto", sans-serif;
 }
 
-.sidebarr a:hover{
-    background: #f0ecec;
+/* -----Uitily Calses */
+:root {
+  /* CSS HEX */
+  /* --tea-green: #ccd5aeff;
+  --beige: #e9edc9ff;
+  --cornsilk: #fefae0ff;
+  --papaya-whip: #faedcdff;
+  --buff: #d4a373ff; */
+  /* ========Transitions ============= */
+  --tran-02: all 0.2s ease;
+  --tran-03: all 0.3s ease;
+  --tran-04: all 0.4s ease;
+  --tran-05: all 0.5s ease;
+  /* CSS HEX */
+
+  --body-color: gray;
+  --Sidebar-color: #9381ffff;
+  --Primary-color: #9381ffff;
+  --Primary-color-light: #f8f7ffff;
+  --Toggle-color: gray;
+  --text-color: black ;
 }
+
+/* .container-fluid {
+  max-width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+} */
+
+/* =====================ReUsed Style */
+i{
+  font-size: 25px;
+  padding: 5px;
+  margin-right: 10px;
+}
+
+  a {
+  text-decoration: none;
+  outline: none;
+}
+
+
+/* -----Sidebar ----- */
+.logo {
+  /* margin-bottom: 5rem; */
+}
+
+.sidebarr {
+  background: var(--Primary-color);
+  height: 100vh;
+  width: 300px;
+  position: fixed;
+  color: white;
+  padding: 15px;
+  /* transition: transform 0.5s ease-in-out; */
+  transition: var(--tran-03);
+}
+
+.sidebarr header {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: 2rem;
+}
+.sidebarr header .closebtn{
+  position: relative;
+  left: 30px;
+}
+.sidebarr header .closebtn i{
+  background-color: var(--Primary-color-light);
+  color: var(--text-color);
+  border-radius: 5px;
+  
+  rotate: 18;
+  cursor: pointer;
+
+}
+
+/* manue  items*/
+.sidebarr nav {
+  /* width: 80%; */
+  margin: auto;
+}
+
+
+.sidebarr nav ul li {
+  display: flex;
+  align-items: center;
+}
+
+.sidebarr nav ul li .dropdownM{
+  float: right;
+}
+.sidebarr nav ul li .dropdownM i{
+  font-size: 18px;
+}
+.sidebarr nav ul li .dropdownM i:hover{
+  color: var(--text-color);
+  color:green;
+}
+
+.sidebarr nav ul li {
+  color: var(--Primary-color-light);
+  display: block;
+  border-radius: 5px;
+  padding: 5px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  border-bottom: 1px solid rgb(124, 107, 218);
+  transition: var(--tran-03);
+}
+
+.sidebarr li:hover {
+  background: var(--Primary-color-light);
+  color: black;
+}
+
+
+/* ------------------sub Manue-----*/
+.sidebarr nav ul .manue {
+  /* display: none; */
+  /* visibility: hidden;; */
+
+  height: 0;
+  overflow: hidden;
+  width: calc(100% - 20px);
+  margin-left: 20px;
+  /* opacity: 0; */
+  transition: var(--tran-05);
+  transition:5.3s ease;
+}
+
+.sidebarr nav ul .manue.show {
+  /* display: block; */
+  /* visibility: visible; */
+  height: auto;
+  /* opacity: 1; */
+}
+
+.sidebarr.close nav ul .manue{
+  transition: var(--tran-02);
+  height: 0;
+
+}
+
+/* ======================sidebar close ======== */
+.sidebarr.close {
+  transition: var(--tran-03);
+  width: 125px;
+}
+
+.sidebarr.close .dropdownM{
+  transition: var(--tran-05);
+  white-space: nowrap;
+  display: none;
+}
+
+.sidebarr.close li{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;;
+}
+.sidebarr.close .closebtn {
+  transition: var(--tran-02);
+  rotate: 180deg;
+}
+
+
+
+
+
+
+
+
+
+
+/* Content */
+.content {
+  margin-left: 19rem;
+  background-color: var(--Primary-color-light);
+  padding: 5px;
+  height: 100vh;
+  font-size: 20px;
+  transition: var(--tran-03);
+
+  /* transition: 1s ease; */
+}
+.content header {
+  padding: 30px 5px;
+  border-bottom: 1px solid var(--Primary-color-light);
+}
+
+/* ============content with Closed Sidebar */
+.content.close{
+  margin-left: 125px;
+  width: calc(100%-125px);
+}
+
+/* ==========ohter =============== */
+.box1,
+.box2 {
+  border: 1px solid var(--Primary-color);
+  margin: 5px;
+  width: 5em;
+  padding: 5px;
+}
+
+.box2 {
+  width: calc(5em + 2em);
+}
+

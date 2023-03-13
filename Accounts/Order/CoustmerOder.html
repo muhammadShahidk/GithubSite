@@ -1,0 +1,151 @@
+<!-- Customer Oreder -->
+<head>
+<link rel="stylesheet" href="cusO.css">
+<h5>Customer Order</h5>
+</head>
+<body>
+    
+
+<div class="CalFrom">
+    <div class="inputField">
+        <label for="Name">Name</label>
+        <input type="text" id="Name">
+    </div>
+
+    <div class="inputField">
+        <label for="Name">Name</label>
+        <input type="text" id="Name">
+    </div>
+
+    <div class="inputField">
+        <label for="Name">Name</label>
+        <input type="text" id="Name">
+    </div>
+
+    <div class="inputField">
+        <label for="Name">Name</label>
+        <input type="text" id="Name">
+    </div>
+
+</div>
+
+
+
+	<style>
+		.container {
+			display: grid; /* Set the container as a grid */
+			grid-template-columns: repeat(3, 1fr); /* Create three columns with equal width */
+			grid-gap: 20px; /* Add a 20px gap between grid items */
+			padding: 20px; /* Add padding to the container */
+			background-color: #f2f2f2; /* Set a background color for the container */
+		}
+
+		.item {
+			background-color: #ddd; /* Set a background color for grid items */
+			padding: 20px; /* Add padding to the grid items */
+			font-size: 30px; /* Set the font size of the grid items */
+			text-align: center; /* Center the text within the grid items */
+		}
+
+		.item-1 {
+			grid-column-start: 1; /* Start at column 1 */
+			grid-column-end: 3; /* End at column 3 */
+			grid-row-start: 1; /* Start at row 1 */
+			grid-row-end: 3; /* End at row 3 */
+		}
+
+		.item-2 {
+			grid-column-start: 3; /* Start at column 3 */
+			grid-column-end: 4; /* End at column 4 */
+			grid-row-start: 1; /* Start at row 1 */
+			grid-row-end: 2; /* End at row 2 */
+		}
+
+		.item-3 {
+			grid-column-start: 2; /* Start at column 2 */
+			grid-column-end: 4; /* End at column 4 */
+			grid-row-start: 2; /* Start at row 2 */
+			grid-row-end: 4; /* End at row 4 */
+		}
+
+		.item-4 {
+			grid-column-start: 1; /* Start at column 1 */
+			grid-column-end: 2; /* End at column 2 */
+			grid-row-start: 3; /* Start at row 3 */
+			grid-row-end: 4; /* End at row 4 */
+		}
+	</style>
+    <style>
+		.container {
+			display: grid; /* Set the container as a grid */
+			grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Create columns with a minimum width of 200px, and use as many columns as can fit within the container */
+			grid-gap: 20px; /* Add a 20px gap between grid items */
+			padding: 20px; /* Add padding to the container */
+			background-color: #f2f2f2; /* Set a background color for the container */
+		}
+
+		.item {
+			background-color: #ddd; /* Set a background color for grid items */
+			padding: 20px; /* Add padding to the grid items */
+			font-size: 30px; /* Set the font size of the grid items */
+			text-align: center; /* Center the text within the grid items */
+		}
+
+		.item-1 {
+			grid-column: 1 / 3; /* Span two columns */
+			grid-row: 1 / 3; /* Span two rows */
+		}
+
+		.item-2 {
+			grid-column: 3; /* Span one column */
+			grid-row: 1 / 3; /* Span two rows */
+		}
+
+		.item-3 {
+			grid-column: 1; /* Span one column */
+			grid-row: 3; /* Span one row */
+		}
+
+		.item-4 {
+			grid-column: 2 / 4; /* Span two columns */
+			grid-row: 3; /* Span one row */
+		}
+
+		@media (max-width: 768px) { /* Apply the following styles when the viewport is smaller than 768px */
+			.container {
+				grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Change the column size to a minimum of 100px */
+				grid-gap: 10px; /* Reduce the gap between grid items to 10px */
+				padding: 10px; /* Reduce the padding of the container to 10px */
+			}
+
+			.item-1 {
+				grid-column: 1 / 5; /* Span four columns */
+				grid-row: 1 / 3; /* Span two rows */
+			}
+
+			.item-2 {
+				grid-column: 1 / 3; /* Span two columns */
+				grid-row: 3; /* Span one row */
+			}
+
+			.item-3 {
+				grid-column: 3 / 5; /* Span two columns */
+				grid-row: 3; /* Span one row */
+			}
+
+			.item-4 {
+				grid-column: 1 / 5; /* Span four columns */
+				grid-row: 4; /* Span one row */
+			}
+		}
+	</style>
+
+	<div class="container">
+		<div class="item item-1">1</div>
+		<div class="item item-2">2</div>
+		<div class="item item-3">3</div>
+		<div class="item item-4">4</div>
+	</div>
+
+
+</body>

@@ -6,47 +6,99 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
-
+    <!-- style sheets  -->
     <link rel="stylesheet" href="MainLayout.css">
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="../css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="layout.css">
+
+    <!-- Ohter -->
     <script src="https://kit.fontawesome.com/e793055494.js" crossorigin="anonymous"></script>
     <script src="../js/jquery-3.6.0.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+
 </head>
 <!-- Note -->
-    <!-- In this Page i will use bootstrap grid system only all other styles will 
+<!-- In this Page i will use bootstrap grid system only all other styles will 
     be wretten using custom css -->
-    <!-- user interactions will be implemented with js custom coding -->
+<!-- user interactions will be implemented with js custom coding -->
+
 <body>
-    <div class="container-fluid">
-        <div class="row ">
-            <div class="border col-2 col-xl-4 sidebarr">
-                <!-- navBar -->
-                
-                    <div class="logo">
-                        <h1 class="p-2 ">logo</h1>
-                    </div>
-                    <nav>
-                        <a href="#" data-page="Dashboard.html">Home</a>
-                        <a href="#" data-page="about.html">About</a>
-                        <a href="#" data-page="contact.html">Contact</a>
-                    </nav>
-            </div>
-            <!-- content aria to display -->
-            <div class="col-12 col-xl-8 border">
-                <div id="content">
+    <div class="container-fluid1">
 
+        <div class="sidebarr">
+            <header>
+                <div class="logo">
+                    <h1 class="p-2 ">logo</h1>
                 </div>
-               
-            </div>
+                <div class="closebtn">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </div>
+            </header>
 
-
+            <nav>
+                <ul>
+                    <li>
+                        <span><i class="fa-solid fa-house"></i></span>
+                        <a href="#" data-page="Dashboard.html">Home</a>
+                        <span class="dropdownM"><i class="fa-solid fa-chevron-down"></i></span>
+                    </li>
+                    <div class="manue">
+                        <ul>
+                            <li>hi there</li>
+                            <li>hi there</li>
+                            <li>hi there</li>
+                            <li>hi there</li>
+                            <li>hi there</li>
+                            <li>hi there</li>
+                        </ul> 
+                    </div>
+                    <li>
+                        <span><i class="fa-solid fa-house"></i></span>
+                        <a href="#" data-page="Order/CoustmerOder.html">Customer Order</a>
+                        <span class="dropdownM"><i class="fa-solid fa-chevron-down"></i></span>
+                    </li>
+                    <div class="manue">
+                        <ul>
+                            <li>hi there</li>
+                            <li>hi there</li>
+                            <li>hi there</li>
+                            <li>hi there</li>
+                            <li>hi there</li>
+                            <li>hi there</li>
+                        </ul> 
+                    </div>
+                    <li>
+                        <span><i class="fa-solid fa-house"></i></span>
+                        <a href="#" data-page="about.html">About</a>
+                        <span class="dropdownM"><i class="fa-solid fa-chevron-down"></i></span>
+                    </li>
+                    <li>
+                        <span><i class="fa-solid fa-house"></i></span>
+                        <a href="#" data-page="contact.html">Contact</a>
+                        <span class="dropdownM"><i class="fa-solid fa-chevron-down"></i></span>
+                    </li>
+                </ul>
+            </nav>
         </div>
+
+        <!-- content aria to display -->
+       
+            <div class="content">
+               <header>
+                <div class="S_Hide"><i onclick="Togole()" class="fa-solid fa-bars"></i></div>
+                <h1>Dashboard</h1>
+               </header>
+               
+               <div id="pageData"></div>
+               <div class="box1">box1</div>
+               <div class="box2"><button onclick="Togole()">Hide</button></div>
+
+            </div>
     </div>
 
     <script>
         // const content = document.querySelector('#content')
-    
+
         // function loadPage(pageName) {
         //   fetch(pageName)
         //     .then(response => response.text())
@@ -54,7 +106,7 @@
         //       content.innerHTML = html
         //     })
         // }
-    
+
         // const links = document.querySelectorAll('nav a')
         // links.forEach(link => {
         //   link.addEventListener('click', event => {
@@ -63,22 +115,52 @@
         //     loadPage(pageName)
         //   })
         // })
-        const content = $('#content');
+        // Varaibls 
+        var closeSidebarbtn = document.querySelector(".closebtn"); 
+        var sidebarr = document.querySelector(".sidebarr"); 
+        var Content = document.querySelector(".content"); 
+        var dropdownM = document.querySelector(".dropdownM i"); 
+        var manue = document.querySelector(".manue"); 
+        console.log(manue);
 
-            function loadPage(pageName) {
-                content.load(pageName);
-            }
+        const content = $('#pageData');
 
-            const links = $('nav a');
-            links.each((index, link) => {
-                $(link).on('click', event => {
-                    event.preventDefault();
-                    const pageName = $(event.target).data('page');
-                    loadPage(pageName);
-                });
+        //loading new page |method
+        function loadPage(pageName) {
+            content.load(pageName);
+        }
+
+        const links = $('nav a');
+        dropdownM.addEventListener("click",()=>{
+            manue.classList.toggle("show");
+            
+        })
+        closeSidebarbtn.addEventListener("click",()=>{
+            sidebarr.classList.toggle("close");
+            Content.classList.toggle("close");
+
+        })
+        function Togole(){
+            var box = document.querySelector(".box1"); 
+            var content = document.querySelector(".content"); 
+            var box = document.querySelector(".sidebarr"); 
+            // box.classList.add("hide");
+            box.classList.toggle("hide");
+            content.classList.toggle("mo");
+            
+            
+        }
+
+        //Manue items, load page data
+        links.each((index, link) => {
+            $(link).on('click', event => {
+                event.preventDefault();
+                const pageName = $(event.target).data('page');
+                loadPage(pageName);
             });
+        });
 
-      </script>
+    </script>
 </body>
 <script src="/js/bootstrap.min.js"></script>
 <!-- <script src="accounts.js"></script> -->

@@ -1,0 +1,19 @@
+.CalFrom{
+    margin-top: 5px;
+    display: grid;
+    width: 80%;
+    margin: auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 2fr 2fr ;
+    gap: 5px;
+    
+}
+
+.inputField{display: flex;}
+.inputField label{
+    padding: 5px;
+}
+.inputField input[type="text"]{
+    padding: 5px;
+}
+
