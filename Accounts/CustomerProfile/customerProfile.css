@@ -1,0 +1,75 @@
+
+/* css to rmeove  */
+body{
+    background-color:var(--body-color);
+}
+/* =======customer profile section ============== */
+section.Customer_Profile {
+    max-width: 560px;
+    margin: auto;
+}
+
+section .Profile_Container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "mainProfile card1"
+        "mainProfile card2"
+    ;
+
+    /* grid-template-areas: 
+"mainProfile c"
+; */
+    gap: 15px;
+    color: white;
+
+    margin-bottom: 5rem;
+}
+
+/* ---------------customer container items--------- */
+.Profile_Container .item {
+    background-color: var(--Primary-color);
+    border-radius: 5px;
+    padding: 15px;
+
+}
+/* -------------------grid area--------- */
+section .Profile_Container .mainProfile {
+    grid-area: mainProfile;
+
+}
+
+.mainProfile .profileImage {
+    border: 1px solid lightgray;
+    background-color:var(--Primary-color-light);
+    border-radius: 15px;
+    color: var(--text-color);
+    text-align: center;
+    height: 200px;
+    margin-bottom: 25px;
+
+}
+
+.mainProfile .info-item{
+    margin: 5px;
+}
+
+.mainProfile span{
+    background-color: var(--primary-color-light);
+    font-weight: 500;
+    padding: 5px;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+/* --------------grid areas---------- */
+section .Profile_Container .card1 {
+    grid-area: card1;
+    border: 1px solid yellow;
+
+}
+
+section .Profile_Container .card2 {
+    grid-area: card2;
+    border: 1px solid red;
+}
+

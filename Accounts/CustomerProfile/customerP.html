@@ -1,0 +1,283 @@
+
+
+
+
+    <!-- <title>Document</title>
+    <link rel="stylesheet" href="../common.css">
+    <link rel="stylesheet" href="customerProfile.css"> -->
+
+
+
+    <h1>hllo</h1>
+    <!-- [CustomerID] -->
+    <!-- [CustomerDate]
+[CustomerName]
+[MobileNo]
+[Location]
+[CNIC]
+
+[Status]
+[Gender]
+[Description]
+
+[Company]
+[C_Address1]
+[C_Address2]
+[PDate] -->
+<style>
+    /* css to rmeove  */
+body{
+    background-color:var(--body-color);
+}
+/* =======customer profile section ============== */
+section.Customer_Profile {
+    max-width: 560px;
+    margin: auto;
+}
+
+section .Profile_Container {
+    font-size: 16px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "mainProfile card1"
+        "mainProfile card2"
+    ;
+
+    /* grid-template-areas: 
+"mainProfile c"
+; */
+    gap: 15px;
+    color: white;
+
+    margin-bottom: 5rem;
+}
+
+/* ---------------customer container items--------- */
+.Profile_Container .item {
+    background-color: var(--Primary-color);
+    border-radius: 5px;
+    padding: 15px;
+
+}
+/* -------------------grid area--------- */
+section .Profile_Container .mainProfile {
+    grid-area: mainProfile;
+
+}
+
+.mainProfile .profileImage {
+    /* border: 1px solid lightgray; */
+    background-color:var(--Primary-color-light);
+    border-radius: 15px;
+    color: var(--text-color);
+    text-align: center;
+    height: 200px;
+    margin-bottom: 25px;
+
+}
+
+.mainProfile .info-item{
+    margin: 5px;
+}
+
+.mainProfile span{
+    background-color: var(--primary-color-light);
+    font-weight: 500;
+    padding: 5px;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+/* --------------grid areas---------- */
+section .Profile_Container .card1 {
+    grid-area: card1;
+    /* border: 1px solid yellow; */
+
+}
+
+section .Profile_Container .card2 {
+    grid-area: card2;
+    /* border: 1px solid red; */
+}
+
+
+</style>
+
+    <section class="Customer_Profile">
+        <div class="Profile_Container">
+            <div class="item border mainProfile">
+                <div class="profileImage"><img src="/images/Profile.jpg" style="width: inherit ; height: inherit; border-radius: 5px; " alt=""></div>
+                <div class="info">
+                    <div class="info-item name"> <span>name</span> Muhammad Sahahid</div>
+                    <div class="info-item location"> <span>location</span> Lahore</div>
+                    <div class="info-item phone"> <span>phone</span> 03477171209</div>
+                    <div class="info-item phone"> <span>Cnic</span> 13503-85693-6</div>
+
+                </div>
+            </div>
+            <div class="item  card1">
+                <div class="Card">
+                    [Status]
+                    [Gender]
+                </div>
+                <div class="card">
+                    <div class="title">[Description]</div>
+                    
+                </div>
+            </div>
+            <div class="item  card2">
+
+                <p><span>[Company]</span>Lahore</p>
+                <p><span>[C_Address1]</span>address 1</p>
+                <p><span>[C_Address2]</span>address 1</p>
+                <p><span>[PDate]</span>date</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            /* 2 column layout */
+            /* grid-template-rows: auto 1fr auto;  */
+            /* 3 row layout */
+            grid-template-areas:
+                "header header"
+                "sidebar content"
+                "sidebar footer"
+            ;
+        }
+
+        .border {
+            border: 1px solid black;
+        }
+
+        .header {
+            grid-area: header;
+            /* position the header item in the header area */
+        }
+
+        .sidebar {
+            grid-area: sidebar;
+            /* position the sidebar item in the sidebar area */
+        }
+
+        .content {
+            grid-area: content;
+            /* position the content item in the content area */
+        }
+
+        .footer {
+            grid-area: footer;
+            /* position the footer item in the footer area */
+        }
+    </style>
+
+    <div class="grid-container">
+        <div class="grid-item header border">Header</div>
+        <div class="grid-item sidebar border">Sidebar</div>
+        <div class="grid-item content border">Content</div>
+        <div class="grid-item footer border">Footer</div>
+    </div>
+
+
+
+
+
+    <h1>Customer Profile</h1>
+    <style>
+        .box {
+            padding: 5px 15px;
+            width: fit-content;
+            margin: auto;
+            cursor: pointer;
+            border: 1px solid black;
+            border-radius: 5px;
+        }
+
+        .flex {
+            display: flex;
+            gap: 15px;
+        }
+
+        .customer {}
+
+        .customerDetails {
+            flex-direction: column;
+            margin-top: 15px;
+            position: fixed;
+            top: 35px;
+            right: 55px;
+            width: 80%;
+            opacity: 1;
+            height: fit-content;
+            background-color: rgb(212, 232, 238);
+
+        }
+
+        .customerDetails .prop {
+            background-color: gray;
+            border: none;
+        }
+
+        .customerDetails.close {
+            /* transition: 3s ease; */
+            height: 0;
+            opacity: 0;
+            height: 0;
+            padding: 0 8px;
+            overflow: hidden;
+            transition: all .3s ease .15s;
+            overflow: hidden;
+            /* transition: 5s ease;
+         */
+
+
+            /* height: 0; */
+            /* display: none; */
+        }
+
+
+
+
+        .customerDetails.show {
+            height: auto;
+        }
+    </style>
+
+
+    <div class="customer flex box">
+        <p>Name</p>
+        <p>Lahore</p>
+        <p> main</p>
+    </div>
+
+    <!-- <div class="customerDetails flex box">
+        <p><span class="prop box">name</span> Shahid</p>
+        <p><span class="prop box">address</span> Lahore</p>
+        <p><span class="prop box">Location</span> Lahore</p>
+        <p><span class="prop box">Cnic</span> 2121212112</p>
+        <p><span class="prop box">pic</span> some pic</p>
+    </div> -->
+
+
+    <script>
+        var customer = document.querySelector(".customer");
+        var cuDetails = document.querySelector(".customerDetails");
+
+        customer.addEventListener("click", () => {
+            cuDetails.classList.toggle("close");
+        })
+
+        cuDetails.addEventListener("click", () => {
+            cuDetails.classList.toggle("close");
+        })
+
+    </script>
+
+
+
