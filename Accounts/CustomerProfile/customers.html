@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customers</title>
+
+    <!-- css Styles -->
+    <link rel="stylesheet" href="../common.css">
+
+    <!-- Other -->
+    <script src="https://kit.fontawesome.com/e793055494.js" crossorigin="anonymous"></script>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+
+   
+   <style>
+        .customers_container {
+            background-color: lightblue;
+            padding: 5px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        /* table contatiner */
+        .customers_container .Tbody {
+            width: 50%;
+            height: 30rem;
+            min-width: 230;
+            /* padding: 50px 0px; */
+            border-radius: 15px;
+            margin: auto;
+            background-color: lightcyan;
+            background-color: blue;
+            /* background-color: violet; */
+
+
+            overflow: auto;
+        }
+
+        /* style scrollbar */
+        .customers_container .Tbody::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        
+        
+        
+        .customers_container .Tbody::-webkit-scrollbar-thumb {
+            background-color: rgb(240, 46, 46);
+            /* height: 5px; */
+            border-radius: 5px;
+            visibility: hidden;
+        }
+        
+        .customers_container .Tbody:hover::-webkit-scrollbar-thumb {
+            cursor: pointer;
+            visibility: visible;
+        }
+
+        .customers_container table {
+
+            /* border: 1px solid black; */
+            border-radius: 15px;
+            border-collapse: collapse;
+            background-color: lightcyan;
+
+            /* -webkit-backdrop-filter: blur(5px); */
+        }
+
+
+        table {
+            table-layout: auto;
+            width: 10px;
+            overflow: auto;
+        }
+
+        table thead th {
+            padding: .5rem;
+            text-transform: capitalize;
+            /* border: 1px solid rgb(238, 197, 197); */
+            /* background-color: violet ; */
+            background-color: blue;
+
+            color: white;
+            /* width:  */
+            min-width: 100px;
+            text-align: left;
+            position: sticky;
+            top: 0;
+            left: 0;
+
+        }
+
+        /* controlling columan with */
+        table th:first-child {
+            min-width: 50px;
+        }
+
+        table th:nth-child(4) {
+            min-width: 150px;
+        }
+
+
+        table th:nth-child(3) {
+            min-width: 120px;
+        }
+        table tbody td {
+            padding: 0.5rem;
+            border-bottom: 1px solid lightcyan;
+        }
+
+        /* applying Styles */
+        /* even rows  */
+        table tr:nth-child(even) {
+            background-color: lightpink;
+        }
+
+        /* hover Effect  */
+        table tr:hover {
+            background-color: lightgrey;
+            cursor: pointer;
+        }
+
+        table img {
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+        }
+
+
+
+        /* making border radious rounded of the table  */
+
+        table thead th:first-child {
+
+            border-top-left-radius: 10px;
+        }
+
+        table thead th:last-child {
+            border-top-right-radius: 10px;
+        }
+
+        table tbody tr:last-child td:first-child {
+            border-bottom-left-radius: 10px;
+        }
+
+        table tbody tr:last-child td:last-child {
+            border-bottom-right-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="customers_container ">
+
+        <section class="Theader">
+            <h1>Customers</h1>
+        </section>
+
+        <section class="Tbody">
+            <table>
+                <thead>
+                    <th>picture </th>
+                    <th>Name</th>
+                    <th>Father Name</th>
+                    <th>Phone number</th>
+                    <th>Status</th>
+                    <th>Status</th>
+                    <th>Status</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><img src="/images/Profile.jpg" alt=""></td>
+                        <td>Umar</td>
+                        <td>umarKhan</td>
+                        <td>2332332112</td>
+                        <td>status</td>
+                        <td>status</td>
+                        <td>status</td>
+                    </tr>
+                    <tr>
+                        <td><img src="/images/shahidprofile.jpeg" alt=""></td>
+                        <td>Umar</td>
+                        <td>umarKhan</td>
+                        <td>2332332112</td>
+                        <td>status</td>
+                        <td>status</td>
+                        <td>status</td>
+                    </tr>
+                    <tr>
+                        <td><img src="/images/Profile.jpg" alt=""></td>
+                        <td>Umar</td>
+                        <td>umarKhan</td>
+                        <td>2332332112</td>
+                        <td>status</td>
+                        <td>status</td>
+                        <td>status</td>
+                    </tr>
+                    <tr>
+                        <td><img src="/images/Profile.jpg" alt=""></td>
+                        <td>Umar</td>
+                        <td>umarKhan</td>
+                        <td>2332332112</td>
+                        <td>status</td>
+                        <td>status</td>
+                        <td>status</td>
+                    </tr>
+                    <tr>
+                        <td><img src="/images/Profile.jpg" alt=""></td>
+                        <td>Umar</td>
+                        <td>umarKhan</td>
+                        <td>2332332112</td>
+                        <td>status</td>
+                        <td>status</td>
+                        <td>status</td>
+                    </tr>
+                    <tr>
+                        <td><img src="/images/Profile.jpg" alt=""></td>
+                        <td>Umar</td>
+                        <td>umarKhan</td>
+                        <td>2332332112</td>
+                        <td>status</td>
+                        <td>status</td>
+                        <td>status</td>
+                    </tr>
+                    <tr>
+                        <td><img src="/images/Profile.jpg" alt=""></td>
+                        <td>Umar</td>
+                        <td>umarKhan</td>
+                        <td>2332332112</td>
+                        <td>status</td>
+                        <td>status</td>
+                        <td>status</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+    </div>
+</body>
+
+</html>
